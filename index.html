@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HVAC Commerce Pro</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Montserrat Font (с поддръжка на Кирилица, Light до ExtraBold) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900 antialiased pt-12 pb-12 px-4">
+
+    <!-- 1. STICKY TOP BAR -->
+    <div class="fixed top-0 left-0 w-full bg-blue-600 text-white z-50 py-2.5 px-4 shadow-md text-center text-sm font-semibold flex justify-center items-center gap-2 md:gap-6 flex-wrap">
+        <span>Свържете се с нас:</span>
+        
+        <!-- Phone Forwarded Icon (SVG) -->
+        <a href="tel:0877111945" class="hover:underline flex items-center gap-1.5">
+            <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24">
+                <path d="M18 11l5-5-5-5v3h-4v4h4v3zm2 4.5c-1.25 0-2.45-.2-3.57-.57-.35-.11-.74-.03-1.02.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1C8.7 6.45 8.5 5.25 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1z"/>
+            </svg>
+            <span>тел: 0877 111 945</span>
+        </a>
+        
+        <span class="hidden md:inline text-blue-300">|</span>
+        
+        <!-- Viber / Tooltip Icon (SVG) -->
+        <a href="viber://chat?number=%2B359877111945" class="hover:underline flex items-center gap-1.5">
+            <svg class="w-5 h-5 fill-current shrink-0" viewBox="0 0 24 24">
+                <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/>
+            </svg>
+            <span>Viber: 0877 111 945</span>
+        </a>
+    </div>
+
+    <!-- MAIN WRAPPER (75% screen width) -->
+    <main class="w-full lg:w-[75vw] mx-auto bg-white rounded-3xl p-6 md:p-12 shadow-xl space-y-10 mt-4">
+        
+        <!-- Header with Font Weight Contrast -->
+        <header class="text-center">
+            <h1 class="text-4xl md:text-5xl tracking-tight text-gray-900">
+                <span class="font-black">HVAC</span><span class="font-light">Commerce Pro</span>
+            </h1>
+            <p class="text-base md:text-lg font-semibold text-blue-600 tracking-wide mt-2">
+                платформа за управление на ОВК бизнеса
+            </p>
+        </header>
+
+        <!-- MAIN LAYER SECTION: Expanded Height to reveal +15% top image area -->
+        <section class="relative rounded-3xl overflow-hidden min-h-[680px] flex flex-col justify-end p-6 md:p-8 shadow-sm border border-gray-100">
+            
+            <!-- BACKGROUND IMAGE LAYER -->
+            <img src="https://lh3.googleusercontent.com/d/1U4rgSx3khKAvwUNu6mpbK6lObKCWPjMM" 
+                 alt="HVAC Commerce Pro Background Artwork" 
+                 class="absolute inset-0 w-full h-full object-cover object-top z-0 pointer-events-none">
+
+            <!-- TEXT CONTENT OVERLAY LAYER (Shifted Downwards) -->
+            <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 mt-80 md:mt-[380px]">
+                
+                <!-- Column 1 Overlay Box -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-md flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-lg md:text-xl font-bold text-gray-900 mb-4 leading-snug">
+                            Фирмен сайт с бърз онлайн магазин
+                        </h2>
+                        <ul class="space-y-2 text-sm text-gray-800 font-normal">
+                            <li class="flex items-start"><span class="text-black font-extrabold mr-2">✓</span> <span class="font-normal">Персонализиран дизайн</span></li>
+                            <li class="flex items-start"><span class="text-black font-extrabold mr-2">✓</span> <span class="font-normal">Оптимизиран за търсене в Google (SEO)</span></li>
+                            <li class="flex items-start"><span class="text-black font-extrabold mr-2">✓</span> <span class="font-normal">Качване на цялата продуктова гама на Булклима. Възможност за добавяне и на други.</span></li>
+                            <li class="flex items-start"><span class="text-black font-extrabold mr-2">✓</span> <span class="font-normal">Автоматично обновяване на наличности и цени</span></li>
+                            <li class="flex items-start"><span class="text-black font-extrabold mr-2">✓</span> <span class="font-normal">Интеграции за плащане онлайн и интеграции за изплащане</span></li>
+                            <li class="flex items-start"><span class="text-black font-extrabold mr-2">✓</span> <span class="font-normal">Модул за промо цени</span></li>
+                            <li class="flex items-start"><span class="text-black font-extrabold mr-2">✓</span> <span class="font-normal">Модул за реклама и събиране на клиентски запитвания</span></li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-gray-200">
+                        <span class="text-2xl font-extrabold text-gray-900">2256 €</span>
+                    </div>
+                </div>
+
+                <!-- Column 2 Overlay Box -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10 shadow-md flex flex-col justify-between">
+                    <div>
+                        <h2 class="text-lg md:text-xl font-bold text-gray-900 mb-4 leading-snug">
+                            Платформа за оферти и управление на монтажи и продажби
+                        </h2>
+                        <ul class="space-y-2 text-sm text-gray-800 font-normal">
+                            <li class="flex items-start"><span class="text-black font-extrabold mr-2">✓</span> <span class="font-normal">Бързо смятане на оферти</span></li>
+                            <li class="flex items-start"><span class="text-black font-extrabold mr-2">✓</span> <span class="font-normal">График с монтажи</span></li>
+                            <li class="flex items-start"><span class="text-black font-extrabold mr-2">✓</span> <span class="font-normal">Събиране на база с клиенти, име, телефон, закупен климатик</span></li>
+                            <li class="flex items-start"><span class="text-black font-extrabold mr-2">✓</span> <span class="font-normal">Отчет на разходи, печалба и марж по всяка продажба</span></li>
+                        </ul>
+                    </div>
+                    <div class="mt-6 pt-3 border-t border-gray-200">
+                        <span class="text-2xl font-extrabold text-gray-900">1000 €</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SUBSCRIPTION SECTION -->
+        <section class="text-center pt-4">
+            <h3 class="text-base font-semibold text-blue-600 italic mb-8">
+                Абонаменти за хостинг и техн. поддръжка
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Tier 1 -->
+                <div class="relative bg-gray-50 rounded-2xl p-6 text-left border border-gray-200 overflow-hidden min-h-[180px] flex flex-col justify-between shadow-sm">
+                    <img src="https://lh3.googleusercontent.com/d/1_WqJxTTxVZKiidmpUYS_5w1ZUv32Opmn" 
+                         alt="1" 
+                         class="absolute right-0 bottom-0 h-full w-auto object-contain opacity-30 z-0 pointer-events-none">
+                    
+                    <div class="relative z-10">
+                        <h4 class="text-base font-bold text-blue-600">Ниво 1</h4>
+                        <p class="text-sm text-gray-600 mt-1">год. оборот<br><span class="font-medium text-gray-800">go 150 000 €</span></p>
+                    </div>
+                    
+                    <div class="relative z-10 mt-4">
+                        <p class="text-sm font-bold text-gray-900">50 € на месец</p>
+                        <p class="text-sm font-bold text-gray-900">600 € годишно</p>
+                    </div>
+                </div>
+
+                <!-- Tier 2 -->
+                <div class="relative bg-gray-50 rounded-2xl p-6 text-left border border-gray-200 overflow-hidden min-h-[180px] flex flex-col justify-between shadow-sm">
+                    <img src="https://lh3.googleusercontent.com/d/1X4zILyRa2EDxPSAW0KPZGj6gt4VA5aK9" 
+                         alt="2" 
+                         class="absolute right-0 bottom-0 h-full w-auto object-contain opacity-30 z-0 pointer-events-none">
+                    
+                    <div class="relative z-10">
+                        <h4 class="text-base font-bold text-blue-600">Ниво 2</h4>
+                        <p class="text-sm text-gray-600 mt-1">год. оборот<br><span class="font-medium text-gray-800">go 250 000 €</span></p>
+                    </div>
+                    
+                    <div class="relative z-10 mt-4">
+                        <p class="text-sm font-bold text-gray-900">73 € на месец</p>
+                        <p class="text-sm font-bold text-gray-900">876 € годишно</p>
+                    </div>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="relative bg-gray-50 rounded-2xl p-6 text-left border border-gray-200 overflow-hidden min-h-[180px] flex flex-col justify-between shadow-sm">
+                    <img src="https://lh3.googleusercontent.com/d/1HlH5uhZg7MtQppUylqT-Rb_n243ayMfU" 
+                         alt="3" 
+                         class="absolute right-0 bottom-0 h-full w-auto object-contain opacity-30 z-0 pointer-events-none">
+                    
+                    <div class="relative z-10">
+                        <h4 class="text-base font-bold text-blue-600">Ниво 3</h4>
+                        <p class="text-sm text-gray-600 mt-1">год. оборот<br><span class="font-medium text-gray-800">над 250 000 €</span></p>
+                    </div>
+                    
+                    <div class="relative z-10 mt-4">
+                        <p class="text-sm font-bold text-gray-900">96 € на месец</p>
+                        <p class="text-sm font-bold text-gray-900">1152 € годишно</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT FORM SECTION -->
+        <section class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 border border-blue-100 shadow-sm mt-12">
+            <div class="max-w-2xl mx-auto text-center">
+                <h3 class="text-2xl font-bold text-gray-900 mb-2">
+                    Заявете час за среща и демонстрация на платформата.
+                </h3>
+                <p class="text-sm text-gray-600 mb-6">
+                    Попълнете вашите данни и ние ще се свържем с вас в най-кратки срокове.
+                </p>
+
+                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 text-left">
+                    <input type="hidden" name="access_key" value="8f4f2249-f9c4-4061-a541-1188094d4850">
+                    <input type="hidden" name="subject" value="Ново запитване за HVAC Commerce Pro!">
+                    <input type="hidden" name="to_email" value="ivan.gurkov@gmail.com">
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Име и Фамилия</label>
+                        <input type="text" id="name" name="name" required placeholder="Вашето име" 
+                               class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition font-normal">
+                    </div>
+
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Телефонен номер</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="08XX XXX XXX" 
+                               class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition font-normal">
+                    </div>
+
+                    <button type="submit" 
+                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition duration-200 text-base">
+                        Изпрати запитване
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+</body>
+</html>
