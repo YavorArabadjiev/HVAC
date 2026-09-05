@@ -179,10 +179,10 @@
                     Попълнете вашите данни и ние ще се свържем с вас в най-кратки срокове.
                 </p>
 
-                <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 text-left">
+                <form id="contactForm" class="space-y-4 text-left">
                     <input type="hidden" name="access_key" value="8f4f2249-f9c4-4061-a541-1188094d4850">
                     <input type="hidden" name="subject" value="Ново запитване за HVAC Commerce Pro!">
-                    <input type="hidden" name="to_email" value="ivan.gurkov@gmail.com">
+                    <input type="hidden" name="from_name" value="HVAC Commerce Pro - Сайт">
                     <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                     <div>
@@ -197,11 +197,62 @@
                                class="w-full px-4 py-3 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition font-normal">
                     </div>
 
-                    <button type="submit" 
-                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition duration-200 text-base">
+                    <button type="submit" id="submitBtn"
+                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-6 rounded-xl shadow-md transition duration-200 text-base disabled:opacity-60 disabled:cursor-not-allowed">
                         Изпрати запитване
                     </button>
+
+                    <div id="formResult" class="hidden text-sm font-medium rounded-xl px-4 py-3 text-center"></div>
                 </form>
+
+                <script>
+                    const contactForm = document.getElementById('contactForm');
+                    const submitBtn = document.getElementById('submitBtn');
+                    const formResult = document.getElementById('formResult');
+
+                    contactForm.addEventListener('submit', async function (e) {
+                        e.preventDefault();
+
+                        submitBtn.disabled = true;
+                        submitBtn.textContent = 'Изпращане...';
+                        formResult.classList.add('hidden');
+
+                        const formData = new FormData(contactForm);
+                        const object = Object.fromEntries(formData);
+                        const json = JSON.stringify(object);
+
+                        try {
+                            const response = await fetch('https://api.web3forms.com/submit', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json',
+                                    'Accept': 'application/json'
+                                },
+                                body: json
+                            });
+
+                            const result = await response.json();
+
+                            if (response.status === 200 && result.success) {
+                                formResult.textContent = 'Благодарим ви! Заявката е изпратена успешно. Ще се свържем с вас скоро.';
+                                formResult.className = 'text-sm font-medium rounded-xl px-4 py-3 text-center bg-green-100 text-green-800';
+                                contactForm.reset();
+                            } else {
+                                formResult.textContent = 'Възникна грешка: ' + (result.message || 'Моля, опитайте отново или се свържете с нас по телефон.');
+                                formResult.className = 'text-sm font-medium rounded-xl px-4 py-3 text-center bg-red-100 text-red-800';
+                                console.error('Web3Forms error:', result);
+                            }
+                        } catch (error) {
+                            formResult.textContent = 'Грешка при връзката. Моля, опитайте отново или се свържете с нас по телефон.';
+                            formResult.className = 'text-sm font-medium rounded-xl px-4 py-3 text-center bg-red-100 text-red-800';
+                            console.error('Fetch error:', error);
+                        } finally {
+                            formResult.classList.remove('hidden');
+                            submitBtn.disabled = false;
+                            submitBtn.textContent = 'Изпрати запитване';
+                        }
+                    });
+                </script>
             </div>
         </section>
 
